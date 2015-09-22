@@ -1,5 +1,17 @@
 require 'minitest/autorun'
 
+class Person
+  attr_accessor :name
+
+  def initialize first_name
+    self.name = first_name
+  end
+
+  def angry_name
+    name.upcase + "!!!"
+  end
+end
+
 class PersonTest < Minitest::Test
   def test_people_know_their_name
     tom = Person.new "Tom Crawford"
